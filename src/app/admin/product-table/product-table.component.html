@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center">
+
+  <div fxLayout="column" fxFlex="40%" fxFlex.lt-md="100%" fxLayoutAlign="center center">
+
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+    <div class="outer-wrapper" *ngIf="!isLoading">
+      <mat-card fxLayoutAlign="center center" fxLayout="column">
+
+        <div fxLayout="row" fxLayoutAlign="space-between" class="product-table">
+
+          <div class="product-table-title">
+            نام محصول
+          </div>
+          <div class="product-table-action">
+           عملیات
+          </div>
+        </div>
+        <app-product-row  (productDeleted)="onDeleteProduct($event)" *ngFor="let product of allProducts" [product]="product" style="width: 100%;"></app-product-row>
+
+      </mat-card>
+    </div>
+
+
+  </div>
+</div>

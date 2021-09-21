@@ -1,0 +1,19 @@
+
+<div fxLayoutAlign="center center">
+  <div fxFlex="70%" fxFlex.lt-lg="95%" fxLayout="column">
+
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+    <div class="category-products-header">{{categoryTitle}}</div>
+    <div class="outer-wrapper">
+      <mat-card>
+        <div fxLayout="row wrap" fxLayout.xs="column">
+          <app-latest-product [product]="product" *ngFor="let product of latestProducts" fxFlex="25%"
+          ></app-latest-product>
+        </div>
+      </mat-card>
+
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.product-table{
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  background-color: #ededed;
+}
+.product-table-title{
+  font-size: 17px;
+  margin-right: 70px;
+}
+
+.product-table-action{
+  text-align: right;
+
+}

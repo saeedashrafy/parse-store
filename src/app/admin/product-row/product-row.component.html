@@ -1,0 +1,16 @@
+<div *ngIf="product" class="product-row" fxLayout="row" fxLayoutAlign="space-between"
+     >
+
+  <div fxLayoutAlign="center center">
+    <img [src]="product?.imageUrl "  class="product-row-image"/>
+  </div>
+
+  <div class="product-row-title" fxLayoutAlign="center center">
+    {{product.title}}
+  </div>
+
+  <div fxLayoutAlign="center center">
+    <button mat-raised-button  color="warn"  (click)="deleteProduct(product)" >حذف</button>
+    <button mat-raised-button  color="primary" [routerLink]="'product/edit/' + product.id">ویرایش</button>
+  </div>
+</div>

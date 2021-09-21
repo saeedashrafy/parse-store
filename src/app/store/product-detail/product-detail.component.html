@@ -1,0 +1,68 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+<div fxLayoutAlign="center center" *ngIf="product">
+  <div fxFlex="60%" fxFlex.lt-lg="95%" fxLayoutAlign="center center" fxLayout="column">
+    <div fxLayoutAlign="center center" fxFill class="product-container">
+      <div class="outer-wrapper">
+        <mat-card>
+          <div>
+            <div fxLayout="row" fxLayout.lt-md="column">
+              <div fxFlex="60%" fxFlex.md="60" fxFlexOrder="1" fxFlexOrder.lt-md="2" fxLayout="column"
+                   fxLayoutAlign="space-around start" class="product-spec-container">
+                <div fxLayout="column">
+               <span class="product-title">
+            {{product.title}}
+          </span>
+
+
+                </div>
+
+                <div fxLayout="column" class="product-spec-container">
+                <span class="product-spec">
+                  مشخصات محصول:
+            </span>
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="product-spec-row">
+                    <img src="../../../assets/images/icons/components.png" class="product-spec-image"/>
+                    <div class="product-spec-content">اجزا: {{product.stoneMaterial}}</div>
+                  </div>
+                  <div fxLayout="row" fxLayoutAlign="start center" class="product-spec-row">
+                    <img src="../../../assets/images/icons/material.png" class="product-spec-image"/>
+                    <div class="product-spec-content">جنس سنگ:{{product.stoneMaterial}}</div>
+                  </div>
+                  <div fxLayout="row" fxLayoutAlign="start center" class="product-spec-row">
+                    <img src="../../../assets/images/icons/weight.png" class="product-spec-image"/>
+                    <div class="product-spec-content">وزن تقریبی: {{product.weight}} گرم</div>
+                  </div>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="product-cart-container">
+                  <button fxFlex="60%" fxFlexOrder="1" mat-raised-button color="primary">افزودن به ســـبد خریـــد
+                  </button>
+                  <span fxFlex="40%" fxFlexOrder="2" class="product-price">{{product.price  |  number }}
+                    تومـــــان</span>
+                </div>
+
+
+              </div>
+              <div fxLayoutAlign="center center" fxFlexOrder="2" fxFlx="40%" fxFlex.lt-md="100%" fxFlexOrder.lt-md="1"
+                   fxFlexOrder.lt-md="1">
+
+                <img src="{{product.imageUrl}}" class="product-image"/>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around start">
+      <div fxLayout="row" class="product-shipping-container">
+        <img src="../../../assets/images/delivery.svg"/>
+        <span class="product-shipping">ارسال رایگان تهران</span>
+      </div>
+      <div fxLayout="row" class="product-shipping-container">
+        <img src="../../../assets/images/return.svg"/>
+        <span class="product-shipping">تضمین اصالت کالا</span>
+      </div>
+    </div>
+  </div>
+</div>

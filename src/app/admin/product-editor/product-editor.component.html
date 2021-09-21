@@ -1,0 +1,87 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading || updating"></mat-progress-bar>
+<div fxLayoutAlign="center center">
+
+
+  <div fxLayout="column" fxFlex="30%" fxFlex.lt-md="90%" fxLayoutAlign="center center">
+
+
+    <div class="outer-wrapper" *ngIf="!isLoading">
+      <mat-card fxLayout="column">
+        <h2>{{editing ? "ویرایش محصول" : "افزودن محصول جدید"}}</h2>
+
+        <form [formGroup]="productForm" dir="rtl" (ngSubmit)="onSubmitForm()">
+          <!-- <app-file-upload formControlName="image" [isLoading]="isUploading"></app-file-upload>-->
+
+          <div>
+            <!-- File Input -->
+            <div class="upload-file-container" (click)="fileInput.click()" fxLayoutAlign="center center"
+                 fxLayout="column">
+              <mat-icon fxLayoutAlign="center center">image</mat-icon>
+              <h3>برای انتخاب عکس کلیک کنید</h3>
+              <input hidden type="file" #fileInput (change)="uploadFile($event)">
+            </div>
+
+
+            <!-- Image Preview -->
+
+            <div *ngIf="preview && preview !== null" fxLayoutAlign="space-between center"
+                 style="border: 1px solid rgba(0, 0, 0, 0.12);border-radius: 6px;padding: 10px;">
+              <img [src]="preview" [alt]="productForm.value.name" width="70px" height="70px"
+                   style="border-radius: 4px ">
+              <span
+                style="margin-left: auto;margin-right: 20px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">{{previewName}}</span>
+              <mat-spinner *ngIf="isUploading" diameter="25"></mat-spinner>
+              <mat-icon *ngIf="successfulUpload" style="color: green" aria-hidden="false"
+                        aria-label="Example home icon">check_circle
+              </mat-icon>
+            </div>
+
+
+          </div>
+
+
+          <mat-form-field class="field-full-width" appearance="outline">
+            <mat-label>عنوان کالا (اجباری)</mat-label>
+            <input matInput formControlName="title">
+
+          </mat-form-field>
+
+          <mat-form-field class="field-full-width" appearance="outline">
+            <mat-label>قیمت کالا</mat-label>
+            <input matInput formControlName="price">
+
+          </mat-form-field>
+
+          <mat-form-field class="field-full-width" appearance="outline">
+            <mat-label>جنس سنگ</mat-label>
+            <input matInput formControlName="stoneMaterial">
+
+          </mat-form-field>
+
+          <mat-form-field class="field-full-width" appearance="outline">
+            <mat-label>وزن (گرم)</mat-label>
+            <input matInput formControlName="weight">
+          </mat-form-field>
+
+
+          <div formGroupName="category">
+            <mat-button-toggle-group formControlName="id" [(ngModel)]="selectedCategory">
+              <mat-button-toggle id="i" *ngFor="let category of categories;let i= index"
+                                 [value]="category.id">
+                {{category.title}}
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div fxLayoutAlign="center center" fxLayout="row">
+            <button mat-stroked-button color="warn" [disabled]="updating" routerLink="/admin">انصراف</button>
+            <button mat-raised-button color="primary" [disabled]="updating || productForm.invalid" type="submit">ثبت
+            </button>
+          </div>
+
+        </form>
+
+      </mat-card>
+
+    </div>
+  </div>
+</div>

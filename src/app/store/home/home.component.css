@@ -1,0 +1,109 @@
+a{
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+}
+
+.banner{
+
+  border-radius: 12px;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.subBanner{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f5f4ef
+}
+.banner-image{
+  align-self: center;
+  height: 350px;
+
+}
+.banner-subImage{
+  align-self: center;
+  height: 250px;
+  border:10px solid white;
+  margin-top: 5px;
+}
+.banner-title{
+  color: white;
+  text-shadow: 0px 2px 2px rgba(170, 163, 163, 0.64);
+  font-size: 50px;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  margin-top:50px ;
+  word-wrap: break-word;
+  font-weight: bold;
+
+}
+.banner-subtitle{
+  color: black;
+  text-shadow: 0px 2px 2px rgba(170, 163, 163, 0.64);
+  font-size: 35px;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  margin-top:25px ;
+  word-wrap: break-word;
+  font-weight: bold;
+
+}
+.mat-stroked-button{
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  margin-top: 60px;
+  color:#ac8369;
+}
+.mat-card {
+  padding: 4px;
+
+}
+
+@media (max-width: 1279px) {
+  .banner-title{
+    font-size: 30px;
+  }
+  .banner-subtitle{
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+   .banner-title{
+     font-size: 30px;
+     padding:5px;
+     text-align: center;
+     margin-top: 4px;
+   }
+  .banner-subtitle{
+    font-size: 22px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .banner{
+    margin: 2px;
+    padding: 1px;
+  }
+
+  .mat-stroked-button{
+    margin-top: 20px;
+  }
+  .banner-image-wrapper{
+    padding-bottom: 30px;
+    border-right: none;
+    border-bottom: 1px solid #ebcbb5;
+  }
+  .banner-image{
+    height: 400px;
+    margin-top: 4px;
+  }
+}
+
+

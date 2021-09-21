@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto,'Vazir', "Helvetica Neue", sans-serif; }
+
+.mat-stroked-button{
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  margin-top: 60px;
+  color:#ac8369;
+}
+.mat-card {
+  padding: 4px;
+}
+.mat-drawer-container{
+  background-color: white;
+}
+.outer-wrapper {
+  border-radius: 10px;
+  align-self: center;
+  width: 100%;
+  border: 10px solid #f2f1f8;
+  margin: 8px 0;
+}
+
+
+
+
+.mat-tab-links{
+  height: 64px;
+}
+

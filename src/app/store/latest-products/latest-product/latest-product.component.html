@@ -1,0 +1,13 @@
+<a routerLink="/store/product/{{product.id}}"   routerLinkActive="active" *ngIf="product" fxLayout="column" class="product-container">
+
+
+    <img src="{{product.imageUrl}}" class="product-image">
+
+  <div class="product-spec" fxLayoutAlign="space-between space-between" fxLayout="column">
+    <span class="product-title">{{product.title}} </span>
+    <span class="product-price" >{{product.price |  number : '1.0-0'}} تومان </span>
+    <button mat-stroked-button>
+       جزئیـات بیشــــتر
+    </button>
+  </div>
+</a>

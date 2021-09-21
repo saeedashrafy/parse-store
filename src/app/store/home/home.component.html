@@ -1,0 +1,80 @@
+<div fxLayoutAlign="center center" style="background-color: white;">
+  <div fxLayout="column" fxFlex="70%" fxFlex.lt-md="90%" fxLayoutAlign="center center">
+    <a fxLayoutAlign="center center" routerLink="product/Ly6AgXPaFV">
+      <div class="outer-wrapper">
+        <mat-card>
+          <div style="min-height: 250px">
+
+            <div fxLayout="row" fxLayout.xs="column" fxFlex="100%" class="banner"
+                 fxLayoutAlign="space-between space-between"
+                 style="background-image:url('../../../assets/images/watercolour-background.jpg');">
+              <div fxLayoutAlign="center center" fxLayout="column" fxFlex="50%" fxFlex.md="40%" fxFlex.lt-md="100%"
+                   fxFlexOrder.xs="2"
+                   style="padding: 10px;">
+         <span class="banner-title">
+            دســــتبند پلاک
+         </span>
+                <span class="banner-title">
+            بینــــــــــهایت و سنگ
+        </span>
+                <button mat-stroked-button>اکنون ســـفارش دهید</button>
+              </div>
+
+              <div fxFlex="50%" fxFlex.md="60%" fxFlex.lt-md="100%" fxFlexOrder.xs="1" fxLayoutAlign="center center"
+              >
+                <img class="banner-image" src="../../../assets/images/top_banner.jpg">
+              </div>
+
+            </div>
+
+          </div>
+        </mat-card>
+      </div>
+    </a>
+
+    <div class="outer-wrapper">
+      <mat-card>
+        <app-latest-products [categoryType]=CategoryTypes.Women [hasLimit]="true"></app-latest-products>
+      </mat-card>
+    </div>
+
+    <a fxLayoutAlign="center center" routerLink="product/ZGR846Pr0z">
+      <div class="outer-wrapper">
+        <mat-card>
+          <div style="min-height: 250px">
+            <div fxLayout="row" fxLayout.xs="column" class="subBanner"
+                 style="background-image:url('../../../assets/images/nature-background.jpeg');background-repeat: no-repeat;background-size: 100%">
+
+
+              <div fxFlex="50%" fxFlex.lt-md="100%" fxFlexOrder.xs="1" fxLayoutAlign="center center"
+              >
+                <img class="banner-subImage" height="200px" src="../../../assets/images/sub_banner1.jpg">
+              </div>
+              <div fxLayoutAlign="center center" fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%"
+                   fxFlexOrder.xs="2"
+              >
+         <span class="banner-subtitle">
+       دســــتبند پلاکــــ
+        </span>
+                <span class="banner-subtitle">
+                  تاج و مــــروارید
+                </span>
+                <button mat-stroked-button>خریـــد</button>
+              </div>
+
+
+            </div>
+          </div>
+        </mat-card>
+
+      </div>
+    </a>
+
+
+    <div class="outer-wrapper">
+      <mat-card>
+        <app-latest-products [categoryType]=CategoryTypes.Men [hasLimit]="true"></app-latest-products>
+      </mat-card>
+    </div>
+  </div>
+</div>

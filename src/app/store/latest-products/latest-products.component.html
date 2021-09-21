@@ -1,0 +1,12 @@
+<div>
+  <div fxLayout="row" fxLayoutAlign="space-between center" style="padding: 20px">
+    <div class="category-products-header" fxLayoutAlign="center center">{{categoryTitle}}</div>
+    <a mat-stroked-button [routerLink]= "categoryLink"> مشاهده همه</a>
+  </div>
+  <div fxLayout="row wrap" fxLayout.xs="column">
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+    <app-latest-product [product]="product" *ngFor="let product of latestProducts" fxFlex="25%"
+                        fxFlex.lt-lg="100%"></app-latest-product>
+  </div>
+
+</div>

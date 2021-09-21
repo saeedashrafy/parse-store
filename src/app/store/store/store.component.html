@@ -1,0 +1,56 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <div mat-list-item *ngFor="let item of links" routerLink="{{item.url}}">
+        <div fxLayout="row" style="padding: 10px 15px">
+          <h4>{{item.title}}</h4>
+        </div>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content fxLayout="column">
+    <mat-toolbar class="store-header">
+      <mat-toolbar-row fxLayoutAlign="space-between center">
+        <button (click)="sidenav.toggle()" mat-icon-button fxShow="true" fxHide.gt-sm>
+          <mat-icon *ngIf="!sidenav.opened">
+            menu
+          </mat-icon>
+          <mat-icon *ngIf="sidenav.opened">
+            close
+          </mat-icon>
+        </button>
+        <div>
+
+          <a routerLink="/" class="mat-toolbar-title">
+            <img src="https://img.icons8.com/cotton/40/000000/jewelry--v2.png"/>
+            Zoya jewelry </a>
+        </div>
+
+
+        <nav mat-tab-nav-bar color="primary" fxLayout="row" fxShow="true" fxHide.lt-md>
+          <a mat-tab-link *ngFor="let item of links"
+             routerLink="{{item.url}}"
+             (click)="activeLink = item"
+             [active]="activeLink == item">{{item.title}} </a>
+        </nav>
+
+        <button mat-icon-button routerLink="/admin">
+          <mat-icon>
+            person
+          </mat-icon>
+        </button>
+
+      </mat-toolbar-row>
+
+    </mat-toolbar>
+    <router-outlet style="margin-top: 64px">  <!-- content change by changing the route --></router-outlet>
+
+
+    <app-footer fxFlexOffset="auto"></app-footer>
+
+
+    <!-- <app-footer class="app-footer"></app-footer>-->
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,39 @@
+.product-row {
+  padding: 20px 10px;
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+}
+
+
+.product-row:hover {
+  border-color: currentColor;
+}
+
+.product-row-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+}
+
+.product-row-title {
+  font-size: 16px;
+  text-align: right;
+  margin-left: auto;
+  width: 100px;
+  margin-right: 10px;
+
+}
+.mat-raised-button{
+  margin: 0 5px;
+}
+
+@media(max-width: 576px){
+  .product-row {
+    padding: 20px 4px;
+  }
+  .product-row-image{
+    width: 45px;
+    height: 45px;
+  }
+}
