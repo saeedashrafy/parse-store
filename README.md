@@ -1,4 +1,4 @@
-# Simple Online Shop Based on Parse Platfrom & Back4App
+# Simple Online Shop Based on Parse Platform & Back4App
 
 **Live Demo** : [Angular-Online-Shop](https://zoya-jewelry.netlify.app/)
 
