@@ -4,8 +4,11 @@
 
 ## Screenshots:
 
-![](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(15).png | width=600 )
-![](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(16).png | width=600 )
+### Store Home Page:
+![](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(15).png  )
+
+### Admin Home Page:
+![](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(16).png  )
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
