@@ -1,4 +1,14 @@
-# ZoyaJewerly
+# Simple Online Shop Based on Parse Platfrom & Back4App
+
+**Live Demo** : [Angular-Online-Shop](https://zoya-jewelry.netlify.app/)
+
+## Screenshots:
+
+### Home Page:
+
+![Alt text](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(15).png | width=600 "Store Home Page")
+![Alt text](https://github.com/saeedashrafy/parse-store/blob/main/Screenshot%20(16).png | width=600  "Admin Home Page")
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
